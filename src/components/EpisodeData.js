@@ -3,8 +3,14 @@ import axios from 'axios';
 
 const EpisodeData = (props) => {
     const [episodeData, setEpisodeData] = useState();
+    const [characterData, setCharacterData] = useState();
 
     useEffect(() => {
+        console.log(props.episode, "^^^^")
+        // axios.get(`https://rickandmortyapi.com/api/character/${charID}`)
+        // .then(response => {
+        //     setCharacterData(response.data.episode)
+        // })
         axios.get(props.data)
         .then(res => {
             return (
@@ -13,10 +19,10 @@ const EpisodeData = (props) => {
         }).catch(e => {
             console.log(e.message)
         })
-    }, [episodeData]);
+    }, []);
 
     useEffect(() => {
-        this.forceUpdate();
+
     }, [episodeData])
 
 

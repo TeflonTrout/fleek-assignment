@@ -121,7 +121,7 @@ const FullCharDetails = (props) => {
                         </Tabs>
                         {newArr ? newArr.map((item, index) => (
                         <TabPanel key={index} value={tabValue} index={index}>
-                            <EpisodeData data={item}/>
+                            <EpisodeData charID={charID} episode={item} data={item}/>
                         </TabPanel>
                         ))
                         : "NO DATA" }
