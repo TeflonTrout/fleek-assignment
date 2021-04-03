@@ -6,11 +6,6 @@ const EpisodeData = (props) => {
     const [characterData, setCharacterData] = useState();
 
     useEffect(() => {
-        console.log(props.episode, "^^^^")
-        // axios.get(`https://rickandmortyapi.com/api/character/${charID}`)
-        // .then(response => {
-        //     setCharacterData(response.data.episode)
-        // })
         axios.get(props.data)
         .then(res => {
             return (
